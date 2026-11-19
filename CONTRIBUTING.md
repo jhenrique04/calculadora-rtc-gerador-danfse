@@ -33,7 +33,7 @@ Ao relatar um bug, inclua:
 - XML fictício ou redigido usado como entrada (sem dados pessoais ou de contribuintes reais)
 - Comportamento observado vs. comportamento esperado
 - Logs de erro relevantes
-- Versão do Go e sistema operacional
+- Versão do Rust e sistema operacional
 
 ### Sugestão de Melhoria
 
@@ -50,7 +50,7 @@ Ao sugerir uma melhoria, inclua:
 Antes de abrir uma proposta de alteração:
 
 1. Verifique se já existe uma issue ou proposta relacionada.
-2. Rode a suíte local: `task check` (`go fmt` e `go vet`) e `task test` (`go test -race -count=1 ./...`).
+2. Rode a suíte local: `task check` (`cargo fmt` e `cargo clippy`) e `task test` (`cargo test --workspace`).
 3. Mantenha a alteração focada e com mensagens de commit claras.
 
 As propostas serão revisadas pelos mantenedores do repositório.
@@ -59,11 +59,11 @@ As propostas serão revisadas pelos mantenedores do repositório.
 
 ## 4. Padrões de Código
 
-O projeto é escrito em **Go** e segue o estilo idiomático da linguagem.
+O projeto é escrito em **Rust** e segue o estilo idiomático da linguagem.
 
-- **Formatação**: use `gofmt`/`go fmt`. O CI falha se houver arquivos não formatados.
-- **Análise estática**: `go vet` deve passar sem alertas.
-- **Testes**: escreva testes para novas funcionalidades e correções; rode a suíte com `go test -race -count=1 ./...`.
+- **Formatação**: use `cargo fmt`. O CI falha se houver arquivos não formatados.
+- **Análise estática**: `cargo clippy --workspace --all-targets -- -D warnings` deve passar sem alertas.
+- **Testes**: escreva testes para novas funcionalidades e correções; rode a suíte com `cargo test --workspace`.
 - **Dados sensíveis**: nunca inclua credenciais, chaves, XMLs reais ou dados pessoais em código, commits ou issues. Use exemplos fictícios ou redigidos.
 - **Erros**: trate erros explicitamente e evite ignorar ou "engolir" falhas.
 
