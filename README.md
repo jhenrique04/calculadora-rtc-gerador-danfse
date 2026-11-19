@@ -1,10 +1,10 @@
 # DANFSe Service
 
-Serviço HTTP em Go para gerar o DANFSe em PDF a partir do XML de uma NFS-e.
+Serviço HTTP em Rust para gerar o DANFSe em PDF a partir do XML de uma NFS-e.
 
 ## Pré-requisitos
 
-- Go 1.27+
+- Rust estável (edition 2024)
 - [Task](https://taskfile.dev/) — opcional, mas recomendado
 
 ## Executar
@@ -18,13 +18,13 @@ task run
 Sem Task:
 
 ```bash
-go run ./cmd/danfse
+cargo run -p danfse-server
 ```
 
 Por padrão, o servidor inicia na porta `8080`. Para usar outra porta:
 
 ```bash
-SERVER_PORT=8081 go run ./cmd/danfse
+SERVER_PORT=8081 cargo run -p danfse-server
 ```
 
 Também é possível definir `SERVER_PORT` em um arquivo `.env`, que é carregado
@@ -33,12 +33,12 @@ automaticamente pelo Taskfile.
 ## Docker
 Gerar imagem local, execute na raiz do projeto:
 ```bash
-docker build -t danfse-go .
+docker build -t danfse-service .
 ```
 
 Rodar o container localmente:
 ```bash
-docker run -p 8080:8080 danfse-go:latest
+docker run -p 8080:8080 danfse-service:latest
 ```
 
 ## Configuração
@@ -52,7 +52,7 @@ Variáveis de ambiente suportadas:
 | `XML_MAX_SIZE_BYTES` | `5242880` | Limite máximo (em bytes) do XML de entrada, aplicado tanto ao limite de corpo HTTP quanto à validação interna do XML (antes e depois da sanitização do `&`). Valores zero, negativos, não numéricos ou acima do teto de `33554432` (32 MiB) rejeitam a inicialização. |
 
 ```bash
-XML_MAX_SIZE_BYTES=1048576 go run ./cmd/danfse
+XML_MAX_SIZE_BYTES=1048576 cargo run -p danfse-server
 ```
 
 > **Telemetria (OTel):** a inicialização do SDK é **opt-in** e controlada
@@ -63,9 +63,7 @@ XML_MAX_SIZE_BYTES=1048576 go run ./cmd/danfse
 ## Logs (JSON em stderr)
 
 O serviço emite logs estruturados **JSON em stderr** (stdout fica reservado ao
-processo), um único registro por requisição com o evento `request_completed`,
-gerado pelo **RequestLogger nativo do Echo** (sem middleware próprio de
-logging/status/timer):
+processo), um único registro por requisição com o evento `request_completed`:
 
 ```json
 {
@@ -99,7 +97,7 @@ Campos relevantes:
   logados em nível `debug` (não poluem o `info`).
 
 **Nunca são logados**: corpo do XML, PDF, querystring, IDs fiscais ou headers de
-autenticação. Respostas `5xx` são sempre genéricas e não revelam `err.Error()`.
+autenticação. Respostas `5xx` são sempre genéricas e não revelam o erro interno.
 O nível mínimo de log é controlado por `LOG_LEVEL` (ver
 [Configuração](#configuração)).
 
@@ -150,7 +148,7 @@ Exemplo:
 OTEL_SDK_DISABLED=false \
 OTEL_EXPORTER_OTLP_ENDPOINT=http://collector:4318 \
 OTEL_EXPORTER_OTLP_HEADERS="Authorization=Bearer token" \
-go run ./cmd/danfse
+cargo run -p danfse-server
 ```
 
 Comportamento:
@@ -214,7 +212,7 @@ O WASM mantém o padrão compartilhado de 5 MiB.
 task check
 ```
 
-Executa `go fmt` e `go vet`. Para rodar os testes separadamente:
+Executa `cargo fmt` e `cargo clippy`. Para rodar os testes separadamente:
 
 ```bash
 task test
@@ -223,18 +221,17 @@ task test
 Ou diretamente:
 
 ```bash
-go test -race -count=1 ./...
+cargo test --workspace
 ```
 
-Para executar a suíte, mostrar a cobertura de statements por função e gerar o
-relatório HTML local (`coverage.html`):
+Para gerar o relatório HTML de cobertura (requer
+[cargo-llvm-cov](https://github.com/taiki-e/cargo-llvm-cov)):
 
 ```bash
 task coverage
 ```
 
-Abra `coverage.html` no navegador para inspecionar a cobertura. O perfil
-`coverage.out` e o relatório HTML são artefatos locais e não são versionados.
+O relatório fica em `target/llvm-cov/html/index.html` e não é versionado.
 
 ## Build
 
@@ -243,6 +240,15 @@ task build
 ```
 
 O binário será gerado em `bin/danfse-service`.
+
+Para compilar o WASM (requer o target `wasm32-unknown-unknown` e o
+[wasm-bindgen-cli](https://github.com/wasm-bindgen/wasm-bindgen)):
+
+```bash
+task build-wasm
+```
+
+Os artefatos `danfse_bg.wasm` e `danfse.js` são gerados em `bin/`.
 
 Para gerar a imagem Docker:
 
@@ -259,8 +265,4 @@ Com o servidor em execução, a documentação está disponível em:
 A spec usa `basePath` `/` com paths absolutos: o endpoint de negócio
 `/api/danfse` e os probes `/health/live` e `/health/ready`.
 
-Para regenerar os arquivos do Swagger:
-
-```bash
-task swagger
-```
+A spec servida fica em `server/assets/swagger-ui/doc.json` e `doc.yaml`.
