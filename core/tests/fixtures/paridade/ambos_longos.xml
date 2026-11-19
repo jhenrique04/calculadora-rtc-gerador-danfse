@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NFSe versao="1.00" xmlns="http://www.sped.fazenda.gov.br/nfse">
+  <infNFSe Id="NFS35503082212345678000195000000000000126070000000001">
+    <xLocEmi>São Paulo</xLocEmi>
+    <xLocPrestacao>São Paulo</xLocPrestacao>
+    <nNFSe>1234</nNFSe>
+    <cLocIncid>3550308</cLocIncid>
+    <xLocIncid>X</xLocIncid>
+    <xTribNac>Análise e desenvolvimento de sistemas &amp; consultoria</xTribNac>
+    <ambGer>2</ambGer>
+    <cStat>100</cStat>
+    <dhProc>2026-07-14T10:20:30-03:00</dhProc>
+    <emit>
+      <CNPJ>12345678000195</CNPJ>
+      <IM>998877</IM>
+      <xNome>Empresa Prestadora de Serviços Ltda</xNome>
+      <enderNac><xLgr>Rua das Flores</xLgr><nro>100</nro><xCpl>Sala 5</xCpl><xBairro>Centro</xBairro><cMun>3550308</cMun><UF>SP</UF><CEP>01001000</CEP></enderNac>
+      <fone>11987654321</fone>
+      <email>contato@prestadora.com.br</email>
+    </emit>
+    <valores><vCalcDR>10.00</vCalcDR><vCalcBM>5.50</vCalcBM><tpBM>2</tpBM><vBC>1000.00</vBC><pAliqAplic>5.00</pAliqAplic><vISSQN>50.00</vISSQN><vTotalRet>25.00</vTotalRet><vLiq>975.00</vLiq></valores>
+    <IBSCBS>
+      <cLocalidadeIncid>3304557</cLocalidadeIncid>
+      <valores>
+        <vBC>900.00</vBC><vCalcReeRepRes>3.25</vCalcReeRepRes>
+        <uf><pIBSUF>0.10</pIBSUF><pRedAliqUF>10.00</pRedAliqUF><pAliqEfetUF>0.09</pAliqEfetUF></uf>
+        <mun><pIBSMun>0.00</pIBSMun><pAliqEfetMun>0.00</pAliqEfetMun></mun>
+        <fed><pCBS>0.90</pCBS><pRedAliqCBS>10.00</pRedAliqCBS><pAliqEfetCBS>0.81</pAliqEfetCBS></fed>
+      </valores>
+      <totCIBS><vTotNF>984.10</vTotNF><gIBS><vIBSTot>0.81</vIBSTot><gIBSUFTot><vIBSUF>0.81</vIBSUF></gIBSUFTot><gIBSMunTot><vIBSMun>0.00</vIBSMun></gIBSMunTot></gIBS><gCBS><vCBS>7.29</vCBS></gCBS></totCIBS>
+    </IBSCBS>
+    <DPS versao="1.00">
+      <infDPS Id="DPS355030821234567800019500001000000000000001">
+        <tpAmb>2</tpAmb>
+        <dhEmi>2026-07-14T10:00:00-03:00</dhEmi>
+        <serie>900</serie>
+        <nDPS>1</nDPS>
+        <dCompet>2026-07-14</dCompet>
+        <tpEmit>1</tpEmit>
+        <cLocEmi>3550308</cLocEmi>
+        <subst><chSubstda>35503082212345678000195000000000000126070000000000</chSubstda></subst>
+        <prest><CNPJ>12345678000195</CNPJ><regTrib><opSimpNac>3</opSimpNac><regApTribSN>1</regApTribSN><regEspTrib>6</regEspTrib></regTrib></prest>
+        <toma>
+          <CPF>12345678909</CPF><xNome>João da Silva Tomador</xNome>
+          <end><endNac><cMun>3304557</cMun><CEP>20040002</CEP></endNac><xLgr>Avenida Rio Branco</xLgr><nro>1</nro><xBairro>Centro</xBairro></end>
+          <fone>2133334444</fone><email>joao@example.com</email>
+        </toma>
+        <interm>
+          <CNPJ>11222333000181</CNPJ><IM>12345</IM><xNome>Intermediário S.A.</xNome>
+          <end><endNac><cMun>3106200</cMun><CEP>30130000</CEP></endNac><xLgr>Av. Afonso Pena</xLgr><nro>1000</nro></end>
+        </interm>
+        <serv>
+          <locPrest><cLocPrestacao>3550308</cLocPrestacao></locPrest>
+          <cServ><cTribNac>010101</cTribNac><cTribMun>001</cTribMun><xDescServ>Desenvolvimento de software sob encomenda, incluindo levantamento de requisitos, modelagem, implementação, testes automatizados e implantação em ambiente de produção. Suporte técnico mensal incluso. Desenvolvimento de software sob encomenda, incluindo levantamento de requisitos, modelagem, implementação, testes automatizados e implantação em ambiente de produção. Suporte técnico mensal incluso. Desenvolvimento de software sob encomenda, incluindo levantamento de requisitos, modelagem, implementação, testes automatizados e implantação em ambiente de produção. Suporte técnico mensal incluso. Desenvolvimento de software sob encomenda, incluindo levantamento de requisitos, modelagem, implementação, testes automatizados e implantação em ambiente de produção. Suporte técnico mensal incluso. Desenvolvimento de software sob encomenda, incluindo levantamento de requisitos, modelagem, implementação, testes automatizados e implantação em ambiente de produção. Suporte técnico mensal incluso. Desenvolvimento de software sob encomenda, incluindo levantamento de requisitos, modelagem, implementação, testes automatizados e implantação em ambiente de produção. Suporte técnico mensal incluso.</xDescServ><cNBS>115021000</cNBS></cServ>
+          <obra><cObra>OBRA123</cObra></obra>
+          <atvEvento><idAtvEvt>EVT9</idAtvEvt></atvEvento>
+          <infoCompl><idDocTec>DT1</idDocTec><docRef>REF-77</docRef><xPed>PED-1</xPed><gItemPed><xItemPed>1</xItemPed><xItemPed>2</xItemPed></gItemPed><xInfComp>Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais. Informações complementares do contribuinte com detalhes adicionais.</xInfComp></infoCompl>
+        </serv>
+        <valores>
+          <vServPrest><vServ>1000.00</vServ></vServPrest>
+          <vDescCondIncond><vDescIncond>20.00</vDescIncond><vDescCond>5.00</vDescCond></vDescCondIncond>
+          <vDedRed><vDR>10.00</vDR></vDedRed>
+          <trib>
+            <tribMun><tribISSQN>1</tribISSQN><tpRetISSQN>1</tpRetISSQN><BM><nBM>12</nBM><vRedBCBM>5.50</vRedBCBM></BM><exigSusp><tpSusp>1</tpSusp><nProcesso>0001234</nProcesso></exigSusp></tribMun>
+            <tribFed><piscofins><CST>01</CST><vBCPisCofins>1000</vBCPisCofins><vPis>6.50</vPis><vCofins>30.00</vCofins><tpRetPisCofins>2</tpRetPisCofins></piscofins><vRetCP>11.00</vRetCP><vRetIRRF>15.00</vRetIRRF><vRetCSLL>10.00</vRetCSLL></tribFed>
+            <totTrib><vTotTrib><vTotTribFed>100.00</vTotTribFed><vTotTribEst>0.00</vTotTribEst><vTotTribMun>50.00</vTotTribMun></vTotTrib></totTrib>
+          </trib>
+        </valores>
+        <IBSCBS>
+          <finNFSe>0</finNFSe><cIndOp>100301</cIndOp>
+          <dest><CNPJ>99888777000166</CNPJ><xNome>Destinatário Final Ltda</xNome><end><endNac><cMun>4106902</cMun><CEP>80010000</CEP></endNac><xLgr>Rua XV</xLgr><nro>50</nro></end><email>dest@example.com</email></dest>
+          <valores><trib><gIBSCBS><CST>000</CST><cClassTrib>000001</cClassTrib></gIBSCBS></trib></valores>
+        </IBSCBS>
+      </infDPS>
+    </DPS>
+  </infNFSe>
+</NFSe>
