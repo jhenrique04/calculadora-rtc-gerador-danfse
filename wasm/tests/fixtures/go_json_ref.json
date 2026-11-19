@@ -1,0 +1,513 @@
+[
+ {
+  "in": "",
+  "err": "invalid request JSON: unexpected end of JSON input",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": " ",
+  "err": "invalid request JSON: unexpected end of JSON input",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "x",
+  "err": "invalid request JSON: invalid character 'x' looking for beginning of value",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "\u003cundefined\u003e",
+  "err": "invalid request JSON: invalid character '\u003c' looking for beginning of value",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "\u003cnumber: 1\u003e",
+  "err": "invalid request JSON: invalid character '\u003c' looking for beginning of value",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "null",
+  "err": "",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "true",
+  "err": "invalid request JSON: json: cannot unmarshal bool into Go value of type main.danfseRequest",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "1",
+  "err": "invalid request JSON: json: cannot unmarshal number into Go value of type main.danfseRequest",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "\"s\"",
+  "err": "invalid request JSON: json: cannot unmarshal string into Go value of type main.danfseRequest",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "[]",
+  "err": "invalid request JSON: json: cannot unmarshal array into Go value of type main.danfseRequest",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{}",
+  "err": "",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{",
+  "err": "invalid request JSON: unexpected end of JSON input",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"xml\":\"\u003ca/\u003e\"}",
+  "err": "",
+  "xml": "\u003ca/\u003e",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"XML\":\"\u003ca/\u003e\",\"Stc\":2,\"CANHOTO\":false}",
+  "err": "",
+  "xml": "\u003ca/\u003e",
+  "stc": 2,
+  "canhoto": false
+ },
+ {
+  "in": "{\"xml\":\"a\",\"xml\":\"b\"}",
+  "err": "",
+  "xml": "b",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"xml\":1}",
+  "err": "invalid request JSON: json: cannot unmarshal number into Go struct field danfseRequest.xml of type string",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"xml\":true}",
+  "err": "invalid request JSON: json: cannot unmarshal bool into Go struct field danfseRequest.xml of type string",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"xml\":{}}",
+  "err": "invalid request JSON: json: cannot unmarshal object into Go struct field danfseRequest.xml of type string",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"xml\":[]}",
+  "err": "invalid request JSON: json: cannot unmarshal array into Go struct field danfseRequest.xml of type string",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"xml\":null}",
+  "err": "",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"stc\":1.5}",
+  "err": "invalid request JSON: json: cannot unmarshal number 1.5 into Go struct field danfseRequest.stc of type int",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"stc\":1e2}",
+  "err": "invalid request JSON: json: cannot unmarshal number 1e2 into Go struct field danfseRequest.stc of type int",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"stc\":\"1\"}",
+  "err": "invalid request JSON: json: cannot unmarshal string into Go struct field danfseRequest.stc of type int",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"stc\":99999999999999999999}",
+  "err": "invalid request JSON: json: cannot unmarshal number 99999999999999999999 into Go struct field danfseRequest.stc of type int",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"stc\":-0}",
+  "err": "",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"stc\":null}",
+  "err": "",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"stc\":true}",
+  "err": "invalid request JSON: json: cannot unmarshal bool into Go struct field danfseRequest.stc of type int",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"stc\":[1]}",
+  "err": "invalid request JSON: json: cannot unmarshal array into Go struct field danfseRequest.stc of type int",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"canhoto\":1}",
+  "err": "invalid request JSON: json: cannot unmarshal number into Go struct field danfseRequest.canhoto of type bool",
+  "xml": "",
+  "stc": 0,
+  "canhoto": false
+ },
+ {
+  "in": "{\"canhoto\":\"true\"}",
+  "err": "invalid request JSON: json: cannot unmarshal string into Go struct field danfseRequest.canhoto of type bool",
+  "xml": "",
+  "stc": 0,
+  "canhoto": false
+ },
+ {
+  "in": "{\"canhoto\":null}",
+  "err": "",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"canhoto\":{}}",
+  "err": "invalid request JSON: json: cannot unmarshal object into Go struct field danfseRequest.canhoto of type bool",
+  "xml": "",
+  "stc": 0,
+  "canhoto": false
+ },
+ {
+  "in": "{\"canhoto\":true}",
+  "err": "",
+  "xml": "",
+  "stc": 0,
+  "canhoto": true
+ },
+ {
+  "in": "{\"stc\":\"x\",\"xml\":1}",
+  "err": "invalid request JSON: json: cannot unmarshal string into Go struct field danfseRequest.stc of type int",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"stc\":1.5,\"xml\":\"a\"}",
+  "err": "invalid request JSON: json: cannot unmarshal number 1.5 into Go struct field danfseRequest.stc of type int",
+  "xml": "a",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"outro\":1,\"xml\":\"a\"}",
+  "err": "",
+  "xml": "a",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"xml\":\"a\"} x",
+  "err": "invalid request JSON: invalid character 'x' after top-level value",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"xml\":\"a\",}",
+  "err": "invalid request JSON: invalid character '}' looking for beginning of object key string",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{xml:1}",
+  "err": "invalid request JSON: invalid character 'x' looking for beginning of object key string",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"xml\" 1}",
+  "err": "invalid request JSON: invalid character '1' after object key",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"xml\":\"a\" \"b\"}",
+  "err": "invalid request JSON: invalid character '\"' after object key:value pair",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "[1 2]",
+  "err": "invalid request JSON: invalid character '2' after array element",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"xml\":\"\\q\"}",
+  "err": "invalid request JSON: invalid escape sequence `\\q` in string",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"xml\":\"\\u12\"}",
+  "err": "invalid request JSON: invalid escape sequence `\\u12\"}` in string",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"xml\":\"a\nb\"}",
+  "err": "invalid request JSON: invalid character '\\n' in string",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"stc\":01}",
+  "err": "invalid request JSON: invalid character '1' after object key:value pair",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"stc\":-}",
+  "err": "invalid request JSON: invalid character '}' in numeric literal",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"stc\":1.}",
+  "err": "invalid request JSON: invalid character '}' in numeric literal",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"stc\":1e}",
+  "err": "invalid request JSON: invalid character '}' in numeric literal",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"stc\":tru}",
+  "err": "invalid request JSON: invalid character '}' in literal true (expecting 'e')",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"stc\":nul}",
+  "err": "invalid request JSON: invalid character '}' in literal null (expecting 'l')",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"stc\":fals}",
+  "err": "invalid request JSON: invalid character '}' in literal false (expecting 'e')",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"stc\":tx}",
+  "err": "invalid request JSON: invalid character 'x' in literal true (expecting 'r')",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"xml\":\"a\"",
+  "err": "invalid request JSON: unexpected end of JSON input",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"xml\":\"a",
+  "err": "invalid request JSON: unexpected end of JSON input",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "é",
+  "err": "invalid request JSON: invalid character 'é' looking for beginning of value",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"xml\":\"\\u00e9\\ud83d\\ude00\"}",
+  "err": "",
+  "xml": "é😀",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"xml\":\"\\ud800\"}",
+  "err": "",
+  "xml": "�",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"stc\":2}  \n",
+  "err": "",
+  "xml": "",
+  "stc": 2,
+  "canhoto": null
+ },
+ {
+  "in": "{\"xml\":\"   \u003ca/\u003e  \"}",
+  "err": "",
+  "xml": "\u003ca/\u003e",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"Xml\":\"a\",\"xml\":\"b\"}",
+  "err": "",
+  "xml": "b",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"xml\":\"b\",\"Xml\":\"a\"}",
+  "err": "",
+  "xml": "a",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"stc\":1, \"stc\":\"a\"}",
+  "err": "invalid request JSON: json: cannot unmarshal string into Go struct field danfseRequest.stc of type int",
+  "xml": "",
+  "stc": 1,
+  "canhoto": null
+ },
+ {
+  "in": "{\"stc\":9223372036854775807}",
+  "err": "",
+  "xml": "",
+  "stc": 9223372036854775807,
+  "canhoto": null
+ },
+ {
+  "in": "{\"stc\":-9223372036854775808}",
+  "err": "",
+  "xml": "",
+  "stc": -9223372036854775808,
+  "canhoto": null
+ },
+ {
+  "in": "{\"stc\":9223372036854775808}",
+  "err": "invalid request JSON: json: cannot unmarshal number 9223372036854775808 into Go struct field danfseRequest.stc of type int",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"a\":{\"b\":[1,{\"c\":null}]},\"xml\":\"z\"}",
+  "err": "",
+  "xml": "z",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "\u0001",
+  "err": "invalid request JSON: invalid character '\\x01' looking for beginning of value",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"xml\":\"a\"}\u0000",
+  "err": "invalid request JSON: invalid character '\\x00' after top-level value",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "'x'",
+  "err": "invalid request JSON: invalid character '\\'' looking for beginning of value",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"\\u0078ml\":\"q\"}",
+  "err": "",
+  "xml": "q",
+  "stc": 0,
+  "canhoto": null
+ },
+ {
+  "in": "{\"ſtc\":2}",
+  "err": "",
+  "xml": "",
+  "stc": 2,
+  "canhoto": null
+ },
+ {
+  "in": "{\"Ktc\":2}",
+  "err": "",
+  "xml": "",
+  "stc": 0,
+  "canhoto": null
+ }
+]
