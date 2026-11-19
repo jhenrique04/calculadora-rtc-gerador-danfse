@@ -2,6 +2,7 @@
 .env
 
 # Build artifacts
+target/
 bin/
 
 # OS / editor
