@@ -1,0 +1,20 @@
+[package]
+name = "danfse-core"
+version = "1.0.0"
+description = "Núcleo de geração do DANFSe em PDF a partir do XML da NFS-e nacional"
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+flate2 = "1"
+log = "0.4"
+md-5 = "0.10"
+png = "0.17"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+unicode-segmentation = "1"
+
+[lints]
+workspace = true
