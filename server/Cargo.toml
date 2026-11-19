@@ -1,0 +1,34 @@
+[package]
+name = "danfse-server"
+version = "1.0.0"
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+danfse-core = { path = "../core" }
+axum = { version = "0.8", default-features = false, features = ["tokio", "http1", "http2"] }
+bytes = "1"
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+form_urlencoded = "1"
+futures-util = { version = "0.3", default-features = false, features = ["std"] }
+http-body = "1"
+http-body-util = "0.1"
+hyper = { version = "1", features = ["server", "http1", "http2"] }
+hyper-util = { version = "0.1", features = ["server-auto", "server-graceful", "tokio", "service"] }
+log = { version = "0.4", features = ["std"] }
+opentelemetry = { version = "0.33", default-features = false, features = ["trace", "metrics"] }
+opentelemetry_sdk = { version = "0.33", default-features = false, features = ["trace", "metrics"] }
+opentelemetry-otlp = { version = "0.33", default-features = false, features = ["http-proto", "reqwest-blocking-client", "trace", "metrics"] }
+rand = "0.9"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "signal", "time", "sync"] }
+tower = { version = "0.5", default-features = false, features = ["util"] }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["test-util"] }
+
+[lints]
+workspace = true
