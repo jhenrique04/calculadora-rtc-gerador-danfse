@@ -2,6 +2,8 @@
 
 Serviço HTTP em Rust para gerar o DANFSe em PDF a partir do XML de uma NFS-e.
 
+> Versão em Rust do [gerador de DANFSe da Receita Federal](https://github.com/ReceitaFederal/calculadora-rtc-gerador-danfse), originalmente em Go. O contrato HTTP é o mesmo, e os testes de paridade comparam as respostas e os PDFs com os gravados da versão Go.
+
 ## Pré-requisitos
 
 - Rust estável (edition 2024)
